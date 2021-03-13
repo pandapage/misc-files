@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      function iOS() {
+        return (
+          [
+            "iPad Simulator",
+            "iPhone Simulator",
+            "iPod Simulator",
+            "iPad",
+            "iPhone",
+            "iPod",
+          ].includes(navigator.platform) ||
+          // iPad on iOS 13 detection
+          (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        );
+      }
+
+      window.location = iOS() ? 'https://apps.apple.com/ua/app/nooplanetarium-ar/id1547172115' : 'https://play.google.com/store/apps/details?id=com.Demi.NooPlanetarium';
+    </script>
+
+    <h1>NooPlanetAR</h1>
+
+    <a href="https://apps.apple.com/ua/app/nooplanetarium-ar/id1547172115">
+      <h2>
+        App store
+      </h2>
+    </a>
+    
+    <a href="https://play.google.com/store/apps/details?id=com.Demi.NooPlanetarium">
+      <h2>
+        Google play
+      </h2>
+    </a>
+    
+  </body>
+</html>
